@@ -1,0 +1,49 @@
+/* Main */
+.vakancii h1{
+	font-size: 36px;
+	padding: 45px 0 35px;
+}
+.accordion {
+	overflow: hidden;
+	width: 650px;
+	display: inline-block;
+	margin-right: -4px;
+	vertical-align: top;
+	margin-bottom: 80px;
+}
+.accordion-section-title {
+	padding: 3px 12px;
+	margin-bottom: 20px;
+	display: inline-block;
+	-webkit-transition: all linear .15s;
+	transition: all linear .15s;
+	font-weight: 700;
+	font-size: 24px;
+}
+.accordion-section-title.active{
+	background: #0de4d8;
+}
+.accordion-section-content {
+	padding: 0 0 30px 55px;
+	display: none;
+	line-height: 1.2;
+}
+.accordion-section-content ul{
+	padding: 20px 0;
+}
+.accordion-section-content ul li{
+	font-size: 18px;
+	line-height: 1.2;
+	position: relative;
+	padding-left: 21px;
+}
+.accordion-section-content ul li:before{
+	display: block;
+	content: '';
+	position: absolute;
+	width: 13px;
+	height: 1px;
+	background: #08080b;
+	left: 0;
+	top: 10px;
+}

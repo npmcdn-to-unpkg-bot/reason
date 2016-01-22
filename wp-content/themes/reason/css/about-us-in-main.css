@@ -1,0 +1,101 @@
+/* Main */
+.img-cont{
+	float: left;
+	padding-top: 50px;
+}
+.img-cont:after{
+	display: block;
+	content: '';
+	clear: both;
+}
+.img-cont .photo{
+	width: 300px;
+	height: 320px;
+	background-size: cover;
+}
+.img-cont h1{
+	font-size: 18px;
+	color: #0de4d8;
+	padding: 10px 0 5px;
+}
+.img-cont p{
+	font-size: 14px;
+	line-height: 1.266;
+}
+
+.blockquote{
+	float: right;
+	padding-top: 50px;
+	width: 859px;
+}
+.blockquote:after{
+	display: block;
+	content: '';
+	clear: both;
+}
+.blockquote blockquote{
+	display: block;
+	width: 600px;
+	position: relative;
+	margin: 100px 0 0 170px;
+	font-size: 14px;
+	font-style: italic;
+	line-height: 1.429;
+}
+.blockquote blockquote:before{
+	display: block;
+	content: '';
+	background: url(../img/quotes.png) no-repeat;
+	width: 27px;
+	height: 17px;
+	position: absolute;
+	left: -45px;
+	top: -13px;
+}
+.blockquote blockquote:after{
+	display: block;
+	content: '';
+	background: url(../img/quotes-2.png) no-repeat;
+	width: 27px;
+	height: 17px;
+	position: absolute;
+	left: 98%;
+	top: 97%;
+}
+
+.nastavnik:after{
+	display: block;
+	content: '';
+	clear: both;
+}
+.opisanie{
+	float: left;
+	width: 900px;
+	padding: 35px 0 50px;
+	font-size: 18px;
+	line-height: 1.222;
+	font-weight: 300;
+}
+
+/* News */
+.last-news h2{
+	font-size: 28px;
+}
+.news-grid{
+	padding: 35px 0 40px;
+}
+.news-grid li{
+	display: inline-block;
+	width: 360px;
+	margin: 0 80px 25px 0;
+	vertical-align: top;
+}
+.news-grid li h3{
+	font-size: 18px;
+	line-height: 1.5;
+	letter-spacing: 0.045em;
+}
+.news-grid li time{
+	font-size: 14px;
+	line-height: 1.929;
+}

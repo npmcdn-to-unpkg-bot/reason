@@ -1,0 +1,987 @@
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	min-width: 320px;
+	position: fixed;
+	line-height: 1.0;
+	font-family: "RobotoRegular", sans-serif;
+	overflow-x: hidden;
+	width: 100%;
+	height: 100%;
+	background-color: #08080b;
+	z-index: -15;
+	color: #efffff;
+}
+/* Planets */
+.planets-cont{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 28%;
+	margin: auto;
+	opacity: 0;
+}
+.opacity .planets-cont{
+	opacity: 1;
+}
+.planets-cont > div{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: -5px;
+}
+.planets-cont > div > a > h2{
+	color: #efffff;
+	position: absolute;
+	font-weight: 400;
+	font-size: 28px;
+	transition: all 0.3s ease-out;
+	-webkit-animation: weightlessness 10s linear infinite;
+	-o-animation: weightlessness 10s linear infinite;
+	animation: weightlessness 10s linear infinite;
+}
+.planets:hover h2{
+	color: #0de4d8;
+}
+.planets{
+	position: relative;
+	transform: perspective(850px);
+}
+.planets img{
+	max-width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+	position: absolute;
+}
+.planets .planet-img{
+	position: relative;
+}
+/* H2 positions */
+.fir-stil{
+	top: 130%;
+	left: 30%;
+}
+.saity{
+	top: -60%;
+	left: 40%;
+}
+.apps{
+	top: 120%;
+	left: 40%;
+	-webkit-animation-delay: 4s;
+	animation-delay: 4s;
+}
+.planets .services{
+	top: -80%;
+	left: 30%;
+	opacity: 0;
+}
+.planets .about-us{
+	top: 130%;
+	left: 30%;
+	opacity: 0;
+}
+.planets:hover h2{
+	opacity: 1;
+}
+.all{
+	top: 115%;
+	left: 40%;
+	-webkit-animation-delay: 6s;
+	animation-delay: 6s;
+}
+
+/* Адаптивная разметка */
+.rasporka-left{
+	width: 5.677083%;
+	height: 50px;
+}
+.rasporka-right{
+	width: 4.6875%;
+	height: 50px;
+}
+.planet-margin{
+	width: 7.604167%;
+	height: 50px;
+}
+.planets{
+	position: relative;
+	transition: all 3s ease;
+}
+.planet-1{
+	width: 6.979167%;
+	transform: translateY(-150px);
+}
+.planet-2{
+	width: 4.0625%;
+	transform: translateY(50px);
+}
+.planet-3{
+	width: 8.802083%;
+	transform: translateY(100px);
+}
+.planet-4{
+	width: 5.833333%;
+	transform: translateY(-50px);
+}
+.planet-5{
+	width: 10.520833%;
+	transform: translateY(-90px);
+}
+.planet-6{
+	width: 15.416667%;
+	transform: translateY(150px);
+}
+.planets-vertical .planets-cont .one-line{
+	transform: translateY(0);
+}
+.planet-1 .mini-img-1,
+.planet-1 .mini-img-2{
+	max-width: 26.86567%;
+}
+.planet-1 .mini-img-1{
+	top: 2%;
+	left: 107%;
+}
+.planet-1 .mini-img-2{
+	top: 100%;
+	left: -10%;
+}
+.planet-2 .mini-img-1{
+	max-width: 46%;
+	top: -28%;
+	left: 105%;
+}
+.planet-3 .mini-img-1{
+	max-width: 21.3%;
+	top: 90%;
+	left: 90%;
+	z-index: 10;
+}
+.planet-5 .mini-img-1{
+	max-width: 17.8%;
+	top: 81%;
+	left: 100%;
+	z-index: 10;
+}
+.planet-6 .mini-img-1{
+	max-width: 20.27%;
+	top: 5%;
+	left: -20%;
+	z-index: 10;
+}
+
+/* Анимация планеты 1-2 */
+/* Анимация полёта вокруг планеты 1920 */
+@-webkit-keyframes orbita1920-1-2 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(140px,-170px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+@keyframes orbita1920-1-2 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(140px,-170px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+
+/* Анимация полёта вокруг планеты 1600 */
+@-webkit-keyframes orbita1600-1-2 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(110px,-135px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+@keyframes orbita1600-1-2 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(110px,-135px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+
+/* Анимация полёта вокруг планеты 1366 */
+@-webkit-keyframes orbita1366-1-2 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(95px,-115px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+@keyframes orbita1366-1-2 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(95px,-115px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+
+
+/* Анимация планеты 1-1 */
+/* Анимация полёта вокруг планеты 1920 */
+@-webkit-keyframes orbita1920-1-1 {
+	0%{
+		transform: translate(0,0);
+		z-index: -500;
+	}
+	50%{
+		transform: translate(-190px,87px);
+		z-index: 1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: 1;
+	}
+}
+@keyframes orbita1920-1-1 {
+	0%{
+		transform: translate(0,0);
+		z-index: -500;
+	}
+	50%{
+		transform: translate(-190px,87px);
+		z-index: 1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: 1;
+	}
+}
+
+/* Анимация полёта вокруг планеты 1600 */
+@-webkit-keyframes orbita1600-1-1 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(-155px,75px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+@keyframes orbita1600-1-1 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(-150px,85px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+
+/* Анимация полёта вокруг планеты 1366 */
+@-webkit-keyframes orbita1366-1-1 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(-125px,75px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+@keyframes orbita1366-1-1 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(-85px,60px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+
+
+/* Анимация планеты 2 */
+/* Анимация полёта вокруг планеты 1920 */
+@-webkit-keyframes orbita1920-2 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(-117px,87px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+@keyframes orbita1920-2 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(-117px,87px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+
+/* Анимация полёта вокруг планеты 1600 */
+@-webkit-keyframes orbita1600-2 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(-100px,75px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+@keyframes orbita1600-2 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(-100px,75px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+
+/* Анимация полёта вокруг планеты 1366 */
+@-webkit-keyframes orbita1366-2 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(-85px,60px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+@keyframes orbita1366-2 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(-85px,60px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+
+
+/* Анимация планеты 3 */
+/* Анимация полёта вокруг планеты 1920 */
+@-webkit-keyframes orbita1920-3 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(-172px,-172px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+@keyframes orbita1920-3 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(-172px,-172px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+
+/* Анимация полёта вокруг планеты 1600 */
+@-webkit-keyframes orbita1600-3 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(-150px,-150px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+@keyframes orbita1600-3 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(-150px,-150px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+
+/* Анимация полёта вокруг планеты 1366 */
+@-webkit-keyframes orbita1366-3 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(-125px,-125px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+@keyframes orbita1366-3 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(-125px,-125px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+
+/* Анимация планеты 5 */
+/* Анимация полёта вокруг планеты 1920 */
+@-webkit-keyframes orbita1920-5 {
+	0%{
+		transform: translate(0,0);
+		z-index: -500;
+	}
+	50%{
+		transform: translate(-235px,-155px);
+		z-index: 1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: 1;
+	}
+}
+@keyframes orbita1920-5 {
+	0%{
+		transform: translate(0,0);
+		z-index: -500;
+	}
+	50%{
+		transform: translate(-235px,-155px);
+		z-index: 1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: 1;
+	}
+}
+
+/* Анимация полёта вокруг планеты 1600 */
+@-webkit-keyframes orbita1600-5 {
+	0%{
+		transform: translate(0,0);
+		z-index: -500;
+	}
+	50%{
+		transform: translate(-205px,-130px);
+		z-index: 1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: 1;
+	}
+}
+@keyframes orbita1600-5 {
+	0%{
+		transform: translate(0,0);
+		z-index: -500;
+	}
+	50%{
+		transform: translate(-205px,-130px);
+		z-index: 1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: 1;
+	}
+}
+
+/* Анимация полёта вокруг планеты 1366 */
+@-webkit-keyframes orbita1366-5 {
+	0%{
+		transform: translate(0,0);
+		z-index: -500;
+	}
+	50%{
+		transform: translate(-175px,-115px);
+		z-index: 1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: 1;
+	}
+}
+@keyframes orbita1366-5 {
+	0%{
+		transform: translate(0,0);
+		z-index: -500;
+	}
+	50%{
+		transform: translate(-175px,-115px);
+		z-index: 1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: 1;
+	}
+}
+
+/* Анимация планеты 6 */
+/* Анимация полёта вокруг планеты 1920 */
+@-webkit-keyframes orbita1920-6 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(350px,200px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+@keyframes orbita1920-6 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(350px,200px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+
+/* Анимация полёта вокруг планеты 1600 */
+@-webkit-keyframes orbita1600-6 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(300px,165px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+@keyframes orbita1600-6 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(300px,165px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+
+/* Анимация полёта вокруг планеты 1366 */
+@-webkit-keyframes orbita1366-6 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(270px,150px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+@keyframes orbita1366-6 {
+	0%{
+		transform: translate(0,0);
+		z-index: 500;
+	}
+	50%{
+		transform: translate(270px,150px);
+		z-index: -1;
+	}
+	100%{
+		transform: translate(0,0);
+		z-index: -1;
+	}
+}
+
+
+/* Невесомость */
+@-webkit-keyframes weightlessness {
+	15%{
+		transform: translate(2px,-3px);
+	}
+	30%{
+		transform: translate(4px,-6px);
+	}
+	45%{
+		transform: translate(6px,-3px);
+	}
+	60%{
+		transform: translate(6px,0px);
+	}
+	75%{
+		transform: translate(4px,3px);
+	}
+	90%{
+		transform: translate(2px,3px);
+	}
+	100%{
+		transform: translate(0,0);
+	}
+}
+@keyframes weightlessness {
+	15%{
+		transform: translate(2px,-3px);
+	}
+	30%{
+		transform: translate(4px,-6px);
+	}
+	45%{
+		transform: translate(6px,-3px);
+	}
+	60%{
+		transform: translate(6px,0px);
+	}
+	75%{
+		transform: translate(4px,3px);
+	}
+	90%{
+		transform: translate(2px,3px);
+	}
+	100%{
+		transform: translate(0,0);
+	}
+}
+
+.planet-1 .mini-img-1{
+	-webkit-animation: orbita1920-1-1 7s ease-in-out infinite paused;
+	animation: orbita1920-1-1 7s ease-in-out infinite paused;
+}
+.planet-1:hover .mini-img-1{
+	-webkit-animation: orbita1920-1-1 7s ease-in-out infinite running;
+	animation: orbita1920-1-1 7s ease-in-out infinite running;
+}
+.planet-1 .mini-img-2{
+	-webkit-animation: orbita1920-1-2 6s ease-in-out infinite paused;
+	animation: orbita1920-1-2 7s ease-in-out infinite paused;
+}
+.planet-1:hover .mini-img-2{
+	-webkit-animation: orbita1920-1-2 6s ease-in-out infinite running;
+	animation: orbita1920-1-2 7s ease-in-out infinite running;
+}
+
+.planet-2 .mini-img-1{
+	-webkit-animation: orbita1920-2 5s ease-in-out infinite;
+	animation: orbita1920-2 5s ease-in-out infinite;
+}
+
+.planet-3 .mini-img-1{
+	-webkit-animation: orbita1920-3 7s ease-in-out infinite paused;
+	animation: orbita1920-3 7s ease-in-out infinite paused;
+}
+.planet-3:hover .mini-img-1{
+	-webkit-animation: orbita1920-3 7s ease-in-out infinite running;
+	animation: orbita1920-3 7s ease-in-out infinite running;
+}
+
+.planet-5 .mini-img-1{
+	-webkit-animation: orbita1920-5 8s ease-in-out infinite paused;
+	animation: orbita1920-5 8s ease-in-out infinite paused;
+}
+.planet-5:hover .mini-img-1{
+	-webkit-animation: orbita1920-5 8s ease-in-out infinite running;
+	animation: orbita1920-5 8s ease-in-out infinite running;
+}
+
+.planet-6 .mini-img-1{
+	-webkit-animation: orbita1920-6 7s ease-in-out infinite paused;
+	animation: orbita1920-6 7s ease-in-out infinite paused;
+}
+.planet-6:hover .mini-img-1{
+	-webkit-animation: orbita1920-6 7s ease-in-out infinite running;
+	animation: orbita1920-6 7s ease-in-out infinite running;
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* XL-Wide Screens */
+@media only screen and (max-width : 1600px) {
+	.menu-but{
+		font-size: 20px;
+	}
+	.side-menu li a{
+		font-size: 24px;
+	}
+	.planet-1 .mini-img-1{
+		-webkit-animation: orbita1600-1-1 7s ease-in-out infinite paused;
+		animation: orbita1600-1-1 7s ease-in-out infinite paused;
+	}
+	.planet-1:hover .mini-img-1{
+		-webkit-animation: orbita1600-1-1 7s ease-in-out infinite running;
+		animation: orbita1600-1-1 7s ease-in-out infinite running;
+	}
+	.planet-1 .mini-img-2{
+		-webkit-animation: orbita1600-1-2 5s ease-in-out infinite paused;
+		animation: orbita1600-1-2 7s ease-in-out infinite paused;
+	}
+	.planet-1:hover .mini-img-2{
+		-webkit-animation: orbita1600-1-2 5s ease-in-out infinite running;
+		animation: orbita1600-1-2 7s ease-in-out infinite running;
+	}
+	.planet-2 .mini-img-1{
+		-webkit-animation: orbita1600-2 5s ease-in-out infinite;
+		animation: orbita1600-2 5s ease-in-out infinite;
+	}
+	.planet-3 .mini-img-1{
+		-webkit-animation: orbita1600-3 7s ease-in-out infinite paused;
+		animation: orbita1600-3 7s ease-in-out infinite paused;
+	}
+	.planet-3:hover .mini-img-1{
+		-webkit-animation: orbita1600-3 7s ease-in-out infinite running;
+		animation: orbita1600-3 7s ease-in-out infinite running;
+	}
+
+	.planet-5 .mini-img-1{
+		-webkit-animation: orbita1600-5 8s ease-in-out infinite paused;
+		animation: orbita1600-5 8s ease-in-out infinite paused;
+	}
+	.planet-5:hover .mini-img-1{
+		-webkit-animation: orbita1600-5 8s ease-in-out infinite running;
+		animation: orbita1600-5 8s ease-in-out infinite running;
+	}
+
+	.planet-6 .mini-img-1{
+		-webkit-animation: orbita1600-6 8s ease-in-out infinite paused;
+		animation: orbita1600-6 8s ease-in-out infinite paused;
+	}
+	.planet-6:hover .mini-img-1{
+		-webkit-animation: orbita1600-6 8s ease-in-out infinite running;
+		animation: orbita1600-6 8s ease-in-out infinite running;
+	}
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1366px) {
+	.planets-cont > div > a > h2{
+		font-size: 22px;
+	}
+	.planet-1 .mini-img-1{
+		-webkit-animation: orbita1366-1-1 7s ease-in-out infinite paused;
+		animation: orbita1366-1-1 7s ease-in-out infinite paused;
+	}
+	.planet-1:hover .mini-img-1{
+		-webkit-animation: orbita1366-1-1 7s ease-in-out infinite running;
+		animation: orbita1366-1-1 7s ease-in-out infinite running;
+	}
+	.planet-1 .mini-img-2{
+		-webkit-animation: orbita1366-1-2 6s ease-in-out infinite paused;
+		animation: orbita1366-1-2 7s ease-in-out infinite paused;
+	}
+	.planet-1:hover .mini-img-2{
+		-webkit-animation: orbita1366-1-2 6s ease-in-out infinite running;
+		animation: orbita1366-1-2 7s ease-in-out infinite running;
+	}
+	.planet-2 .mini-img-1{
+		-webkit-animation: orbita1366-2 5s ease-in-out infinite;
+		animation: orbita1366-2 5s ease-in-out infinite;
+	}
+	.planet-3 .mini-img-1{
+		-webkit-animation: orbita1366-3 7s ease-in-out infinite paused;
+		animation: orbita1366-3 7s ease-in-out infinite paused;
+	}
+	.planet-3:hover .mini-img-1{
+		-webkit-animation: orbita1366-3 7s ease-in-out infinite running;
+		animation: orbita1366-3 7s ease-in-out infinite running;
+	}
+
+	.planet-5 .mini-img-1{
+		-webkit-animation: orbita1366-5 8s ease-in-out infinite paused;
+		animation: orbita1366-5 8s ease-in-out infinite paused;
+	}
+	.planet-5:hover .mini-img-1{
+		-webkit-animation: orbita1366-5 8s ease-in-out infinite running;
+		animation: orbita1366-5 8s ease-in-out infinite running;
+	}
+
+	.planet-6 .mini-img-1{
+		-webkit-animation: orbita1366-6 8s ease-in-out infinite paused;
+		animation: orbita1366-6 8s ease-in-out infinite paused;
+	}
+	.planet-6:hover .mini-img-1{
+		-webkit-animation: orbita1366-6 8s ease-in-out infinite running;
+		animation: orbita1366-6 8s ease-in-out infinite running;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	
+	/*Disable Animation on Mobile Devices*/
+	
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

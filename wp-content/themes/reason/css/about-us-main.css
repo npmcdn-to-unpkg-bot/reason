@@ -1,0 +1,130 @@
+/* Main */
+.about-us{
+	padding: 50px 0;
+}
+.about-us div{
+	font-size: 24px;
+	line-height: 1.333;
+	width: 800px;
+	margin: 0 auto;
+	font-weight: 300;
+}
+.about-us div p{
+	font-size: 24px;
+	line-height: 1.333;
+	font-weight: 300;
+}
+
+/* We */
+.team-container{
+	padding-bottom: 50px;
+}
+.team-container:after{
+	display: block;
+	content: '';
+	clear: both;
+}
+.team-container h2{
+	margin-bottom: 40px;
+}
+.dark-siders{
+	width: 25%;
+	height: 320px;
+	background: url(../img/agent.jpg) 50% 50% no-repeat;
+	background-size: cover;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+.dark-siders a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.dark-siders a:before{
+	position: absolute;
+	display: block;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-color: #292929;
+	opacity: 0;
+	transition: all 0.4s ease;
+}
+.dark-siders a:hover:before{
+	opacity: 0.5;
+}
+.dark-siders a:after{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: block;
+	content: '';
+	width: 0;
+	height: 4px;
+	background-color: #0de4d8;
+	transition: all 0.4s ease;
+}
+.dark-siders a:hover:after{
+	width: 100%;
+}
+.dark-siders h3{
+	position: absolute;
+	font-size: 14px;
+	line-height: 1.4;
+	font-weight: 300;
+	left: 7%;
+	bottom: 7%;
+	width: 86%;
+	color: #fff;
+	opacity: 0;
+	transform: translateY(-15px);
+	transition: all 0.4s ease;
+}
+.dark-siders h3 .biruza{
+	font-size: 18px;
+	color: rgb(13, 228, 216);
+	font-weight: bold;
+}
+.dark-siders a:hover h3{
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.vacancies-cont{
+	margin-bottom: 50px;
+}
+.vacancies-cont .arrow{
+	display: inline-block;
+	background: url(../img/arrow.png);
+	width: 41px;
+	height: 10px;
+	margin: 0 15px;
+}
+.vacancies-cont a:hover{
+	text-decoration: underline;
+}
+.last-news h2{
+	font-size: 28px;
+}
+.news-grid{
+	padding: 35px 0 40px;
+}
+.news-grid li{
+	display: inline-block;
+	width: 360px;
+	margin: 0 80px 25px 0;
+	vertical-align: top;
+}
+.news-grid li h3{
+	font-size: 18px;
+	line-height: 1.5;
+	letter-spacing: 0.045em;
+}
+.news-grid li h3:hover{
+	text-decoration: underline;
+}
+.news-grid li time{
+	font-size: 14px;
+	line-height: 1.929;
+}

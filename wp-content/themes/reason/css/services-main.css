@@ -1,0 +1,298 @@
+/* Main */
+.center1030{
+	position: relative;
+	width: 1030px;
+	margin: 0 auto;
+}
+.uslugi{
+	padding: 60px 0;
+}
+.uslugi .ways{
+	font-size: 24px;
+	line-height: 1.25;
+	font-weight: 300;
+}
+.uslugi .sfera{
+	font-size: 24px;
+	line-height: 1.25;
+	font-weight: 300;
+	float: right;
+	margin-top: 30px;
+}
+.uslugi .sfera a{
+	color: #0de4d8;
+	text-decoration: underline;
+}
+.uslugi .sfera a:hover{
+	text-decoration: none;
+}
+ul.nav{
+	padding: 100px 0 50px;
+}
+.nav:after{
+	display: block;
+	content: '';
+	clear: both;
+}
+.nav li{
+	float: left;
+	margin-right: 100px;
+}
+.nav li a{
+	font-size: 18px;
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+.nav li a:hover{
+	color: #0de4d8;
+}
+.uslugi  h2{
+	font-size: 24px;
+	padding-bottom: 50px;
+}
+.help{
+	padding-bottom: 80px;
+}
+.help:after{
+	display: block;
+	content: '';
+	clear: both;
+}
+.help li{
+	float: left;
+	font-size: 18px;
+	line-height: 1.5;
+}
+.help li:nth-of-type(2n+1){
+	width: 110px;
+	font-weight: bold;
+}
+.help li:nth-of-type(2n){
+	width: 220px;
+	font-weight: 300;
+}
+.uslugi .shema{
+	font-size: 18px;
+	line-height: 1.333;
+	font-weight: 300;
+}
+.center1030-620{
+	position: relative;
+	width: 498px;
+	height: 620px;
+	margin: 0 auto;
+}
+
+/**/
+.process{
+	margin-bottom: 50px;
+}
+.process .process-circle{
+	background: url(../img/process.png) no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 419px;
+	width: 419px;
+	margin: -208px 0 0 -208px;
+}
+.lines{
+	background: url(../img/process-lines.png) 50% 50% no-repeat;
+	background-size: contain;
+	width: 498px;
+	height: 498px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -250px 0 0 -250px;
+}
+.process h3{
+	font-size: 24px;
+	color: #fff;
+	font-weight: bold;
+	line-height: 1.125;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -12px 0 0 -98px;
+}
+.circle{
+	width: 50px;
+	height: 50px;
+	border: 2px solid #08080b;
+	border-radius: 50%;
+	position: absolute;
+	background: #fff;
+	transition: all 0.5s ease;
+	text-align: center;
+	z-index: 5;
+}
+/* Текст внутри */
+.circle p{
+	font-size: 5px;
+	opacity: 0;
+	transition: all 0.5s ease;
+	padding: 7px;
+	font-weight: 300;
+}
+.circle:hover{
+	transform: scale(4);
+	border: 1px solid #08080b;
+}
+.circle:hover p{
+	opacity: 1;
+}
+/* Текст рядом */
+.circle ~ h4{
+	position: absolute;
+	font-weight: 300;
+	width: 140px;
+	text-align: center;
+	transition: all 0.5s ease;
+	font-size: 18px;
+	line-height: 1.2;
+}
+
+.circle-1 ~ h4{
+	top: -3%;
+	left: 36.4%;
+}
+.circle-2 ~ h4{
+	top: 14%;
+	left: -1.7%;
+}
+.circle-3 ~ h4{
+	top: 10.7%;
+	left: 73.4%;
+}
+.circle-4 ~ h4{
+	top: 56%;
+	left: -13.8%;
+}
+.circle-5 ~ h4{
+	top: 55%;
+	left: 86%;
+}
+.circle-6 ~ h4{
+	top: 84.5%;
+	left: 1.5%;
+}
+.circle-7 ~ h4{
+	top: 85%;
+	left: 70.6%;
+}
+.circle-8 ~ h4{
+	top: 95.3%;
+	left: 36.4%;
+}
+
+/* Корректировка текста в кругах */
+.circle-1 p{
+	margin-top: 8px;
+}
+.circle-3 p{
+	margin-top: 5px;
+}
+.circle-6 p{
+	margin-top: 10px;
+}
+.circle-4 p{
+	margin-top: 2px;
+}
+.circle-2 p{
+	margin-top: 4px;
+}
+.circle-8 p{
+	padding: 6px;
+}
+
+/* Текст детальный */
+.desc-cont{
+	position: absolute;
+	left: 120%;
+	top: 50px;
+	width: 300px;
+}
+.desc-div{
+	position: absolute;
+	opacity: 0;
+	transform: translateX(-15px);
+	transition: all .3s ease;
+}
+.desc-div h5{
+	font-size: 18px;
+	padding-bottom: 10px;
+}
+.desc-div p{
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.2;
+}
+/* Деталка на ховеры */
+.circle-1:hover ~ .desc-cont .desc-div-1{
+	opacity: 1;
+	transform: translateX(0);
+}
+.circle-2:hover ~ .desc-cont .desc-div-8{
+	opacity: 1;
+	transform: translateX(0);
+}
+.circle-3:hover ~ .desc-cont .desc-div-2{
+	opacity: 1;
+	transform: translateX(0);
+}
+.circle-4:hover ~ .desc-cont .desc-div-7{
+	opacity: 1;
+	transform: translateX(0);
+}
+.circle-5:hover ~ .desc-cont .desc-div-3{
+	opacity: 1;
+	transform: translateX(0);
+}
+.circle-6:hover ~ .desc-cont .desc-div-6{
+	opacity: 1;
+	transform: translateX(0);
+}
+.circle-7:hover ~ .desc-cont .desc-div-4{
+	opacity: 1;
+	transform: translateX(0);
+}
+.circle-8:hover ~ .desc-cont .desc-div-5{
+	opacity: 1;
+	transform: translateX(0);
+}
+
+/* Расположение кругов */
+.circle-1{
+	top: 5.5%;
+	left: 44.7%;
+}
+.circle-2{
+	top: 19%;
+	left: 7%;
+}
+.circle-3{
+	top: 19%;
+	left: 82%;
+}
+.circle-4{
+	top: 45.5%;
+	left: -5.1%;
+}
+.circle-5{
+	top: 45.5%;
+	left: 94.17%;
+}
+.circle-6{
+	top: 74%;
+	left: 10%;
+}
+.circle-7{
+	top: 74%;
+	left: 79%;
+}
+.circle-8{
+	top: 85.3%;
+	left: 44.7%;
+}

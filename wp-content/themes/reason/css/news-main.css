@@ -1,0 +1,79 @@
+/* Content */
+/* Top news */
+main{
+	margin-top: 50px;
+}
+.top-news:after{
+	display: block;
+	content: '';
+	clear: both;
+}
+.top-news,
+.grid{
+	padding-bottom: 60px;
+}
+.top-news article{
+	float: left;
+	width: 340px;
+	margin-right: 80px;
+}
+.top-news article:last-of-type{
+	margin-right: 0;
+}
+.top-news h2{
+	font-size: 28px;
+	letter-spacing: 0.075em;
+	line-height: 1.2;
+}
+.top-news .arrow{
+	display: inline-block;
+	background: url(../img/arrow-short.png) no-repeat;
+	width: 28px;
+	height: 11px;
+	margin: 0 0 2px 15px;
+}
+.top-news time{
+	font-size: 12px;
+	line-height: 2.25;
+}
+.top-news p{
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+/* Grid */
+.grid article{
+	float: left;
+	width: 220px;
+	margin-bottom: 40px;
+}
+.grid article:last-of-type{
+	margin-right: 0;
+}
+.grid h2{
+	font-size: 24px;
+	letter-spacing: 0.075em;
+	line-height: 1.125;
+}
+.grid .arrow{
+	display: inline-block;
+	background: url(../img/arrow-short.png) no-repeat;
+	width: 28px;
+	height: 11px;
+	margin: 0 0 2px 15px;
+}
+.grid time{
+	font-size: 12px;
+	line-height: 2.25;
+}
+.grid p{
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.main a:hover{
+	text-decoration: underline;
+}
+time{
+	font-style: normal;
+}

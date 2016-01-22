@@ -1,0 +1,214 @@
+/* Main */
+.main{
+	position: relative;
+	padding: 50px 0;
+}
+.main:after{
+	display: block;
+	content: '';
+	clear: both;
+}
+.left{
+	float: left;
+	width: 930px;
+}
+.left h1{
+	font-size: 36px;
+	padding: 50px 0 38px;
+	font-weight: 300;
+	letter-spacing: 0.075em;
+}
+
+/* Aside */
+.aside{
+	float: right;
+	width: 250px;
+	padding: 125px 0 0 0;
+}
+.aside .link-to-site{
+	display: block;
+	text-decoration: underline;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: right;
+	margin-bottom: 40px;
+}
+.aside h2{
+	text-align: right;
+}
+.desing-cont{
+	padding-top: 40px;
+	float: right;
+	width: 180px;
+}
+.share-please{
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	vertical-align: bottom;
+	margin: 30px 0 40px;
+}
+.ya-share2{
+	display: inline-block;
+	margin: 30px 0 40px;
+}
+
+/* Предопределённые стили */
+blockquote{
+	display: block;
+	width: 600px;
+	position: relative;
+	margin: 50px 0 0 50px;
+	font-size: 14px;
+	font-style: italic;
+	line-height: 1.429;
+}
+blockquote:before{
+	display: block;
+	content: '';
+	background: url(../img/quotes.png) no-repeat;
+	width: 27px;
+	height: 17px;
+	position: absolute;
+	left: -45px;
+	top: -13px;
+}
+blockquote:after{
+	display: block;
+	content: '';
+	background: url(../img/quotes-2.png) no-repeat;
+	width: 27px;
+	height: 17px;
+	position: absolute;
+	left: 98%;
+	top: 97%;
+}
+#tabs1 ul,
+#tabs2 ul,
+#tabs3 ul{
+	padding: 20px 0;
+}
+#tabs1 ul li,
+#tabs2 ul li,
+#tabs3 ul li{
+	display: block;
+	font-size: 18px;
+	line-height: 1.9;
+	font-weight: 300;
+	padding-left: 22px;
+	position: relative;
+}
+#tabs1 ul li:before,
+#tabs2 ul li:before,
+#tabs3 ul li:before{
+	display: block;
+	content: '';
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: #0de4d8;
+	position: absolute;
+	left: 0;
+	top: 13px;
+}
+
+/* Tabolous */
+#tabs a:active, #tabs a:focus {
+	outline: expression(hideFocus='true');
+}
+#tabs,#tabs2,#tabs3,#tabs4,#tabs5 {
+	width: 900px;
+	margin-bottom: 40px;
+}
+
+#tabs>ul>li,#tabs2>ul>li,#tabs3>ul>li,#tabs4>ul>li,#tabs5>ul>li {
+	float: left;
+	margin-right: 50px;
+}
+
+#tabs>ul>li a,#tabs2>ul>li a,#tabs3>ul>li a,#tabs4>ul>li a,#tabs5>ul>li a {
+	display: block;
+	font-size: 18px;
+	transition: all 0.25s ease;
+}
+
+#tabs>ul>li a:hover,#tabs2>ul>li a:hover,#tabs3>ul>li a:hover,#tabs4>ul>li a:hover,#tabs5>ul>li a:hover {
+	color: #0de4d8;
+}
+
+#tabs_container {
+	padding: 40px 0 80px;
+	overflow: hidden;
+	position: relative;
+	background: white;
+}
+
+#tabs1,
+#tabs2,
+#tabs3 {
+	margin-right: 40px;
+}
+
+.transition {
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+
+	-webkit-transition-delay: .3s;
+	-moz-transition-delay: .3s;
+	-o-transition-delay: .3s;
+	-ms-transition-delay: .3s;
+	transition-delay: .3s;
+}
+
+.make_transist {
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.hidescale {
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	-o-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	filter: alpha(opacity=0);
+	opacity: 0;
+	z-index: -1;
+}
+
+.showscale {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+	z-index: 1;
+
+	-webkit-transition-delay: .3s;
+	-moz-transition-delay: .3s;
+	-o-transition-delay: .3s;
+	-ms-transition-delay: .3s;
+	transition-delay: .3s;
+}
+
+.tabulous_active {
+	background: white !important;
+	color: #0de4d8 !important;
+	font-weight: 700;
+}
+
+.tabulousclear {
+	display: block;
+	clear: both;
+}

@@ -1,0 +1,57 @@
+<?php
+/**
+ * The main template file.
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Reason
+ */
+
+get_header(); ?>
+
+	<!-- Blog filter -->
+	<section class="category-cont">
+		<div class="center">
+			<ul class="filter">
+				<li><a href="/portfolio/"><h1>Портфолио</h1></a></li>
+				<li><h2><b>Фирменные стили</b></h2></li>
+				<li><a href="/portfolio-websites/"><h2>Сайты и интерфейсы</h2></a></li>
+				<li><a href="/portfolio-mobile/"><h2>Мобильные приложения</h2></a></li>
+			</ul>
+		</div>
+	</section>
+
+	<main class="main">
+		<div class="center">
+			<section class="grid">
+					<?php $args = array(
+						'category__in' => array( 2 ),
+						'posts_per_page' => 12
+						);
+					$projects_all = new WP_Query($args);
+					if($projects_all->have_posts()):
+						while($projects_all->have_posts()): $projects_all->the_post();?>
+
+					<div class="grid-item">
+						<div class="img-cont">
+							<a href="<?php the_permalink(); ?>"><img src="<?php echo get_field("cover"); ?>" height="auto" max-width="100%" alt=""></a>
+						</div>
+						<h3><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h3>
+						<h4><?php echo get_field("category"); ?></h4>
+						<div class="arrow-block">
+							<div class="arrow-stvol"></div>
+							<div class="arrow-head"></div>
+						</div>
+					</div>
+
+				<? endwhile; endif; ?>
+			</section>
+		</div>
+	</main>
+
+<?php get_footer(); ?>
