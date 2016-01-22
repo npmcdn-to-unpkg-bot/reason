@@ -38,9 +38,7 @@ get_header(); ?>
 					while($projects_all->have_posts()): $projects_all->the_post();?>
 
 					<div class="grid-item">
-						<div class="img-cont">
-							<a href="<?php the_permalink(); ?>"><img src="<?php echo get_field("cover"); ?>" height="auto" max-width="100%" alt=""></a>
-						</div>
+						<a href="<?php the_permalink(); ?>" class="img-cont" style="background: url(<?php echo get_field("cover"); ?>) 50% 50% no-repeat;"></a>
 						<h3><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h3>
 						<h4><?php echo get_field("category"); ?></h4>
 						<div class="arrow-block">
