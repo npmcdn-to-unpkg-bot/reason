@@ -22,6 +22,7 @@
 
 	<title>Ризн</title>
 	<meta name="description" content="">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700,400italic&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
 
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon/apple-touch-icon.png">

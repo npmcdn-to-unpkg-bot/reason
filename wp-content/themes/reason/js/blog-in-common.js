@@ -272,23 +272,17 @@ $(document).ready(function() {
 
 	$('.h2-line p').scroolly([
 	{
-		from: 'doc-top + 160',
+		from: 'doc-top + 161',
 		to: 'doc-bottom',
-		direction: 1,
 		css:{
-			'display' : 'none',
-			'top': '-100px',
-			'z-index': '-1'
+			'display' : 'none'
 		}
 	},
 	{
-		from: 'doc-top + 160',
-		to: 'doc-bottom',
-		direction: -1,
+		from: 'doc-top',
+		to: 'doc-top + 161',
 		css:{
-			'display' : 'block',
-			'top': '0px',
-			'z-index': '1'
+			'display' : 'block'
 		}
 	}
 	]);

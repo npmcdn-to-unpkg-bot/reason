@@ -29,6 +29,7 @@ get_header(); ?>
 	<main class="main">
 		<div class="center">
 			<section class="grid">
+
 				<?php $args = array(
 					'category__in' => array(2, 3, 4),
 					'posts_per_page' => 12
@@ -48,6 +49,7 @@ get_header(); ?>
 					</div>
 
 				<? endwhile; endif; ?>
+
 			</section>
 		</div>
 	</main>
