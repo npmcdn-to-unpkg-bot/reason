@@ -50,26 +50,22 @@ get_header(); ?>
 			<section class="last-news">
 				<h2>Новости</h2>
 				<ul class="news-grid">
-					<li>
-						<h3>Дизайнерские оргазмы и KPI Посоны, кажется я панк Посоны, кажется я панк кажется я панк кажется я панк кажется я панк</h3>
-						<time>04 окт, 11:55</time>
-					</li>
-					<li>
-						<h3>Дизайнерские оргазмы и KPI Посоны, кажется я панк Посоны, кажется я панк</h3>
-						<time>04 окт, 11:55</time>
-					</li>
-					<li>
-						<h3>Посоны, кажется я панк Посоны, кажется я панк Посоны, кажется я панк</h3>
-						<time></time>
-					</li>
-					<li>
-						<h3></h3>
-						<time></time>
-					</li>
-					<li>
-						<h3></h3>
-						<time></time>
-					</li>
+
+					<?php $args = array(
+						'category__in' => array(12),
+						'posts_per_page' => 3
+						);
+					$query = new WP_Query($args);
+					if($query->have_posts()):
+						while($query->have_posts()): $query->the_post();?>
+
+						<article>
+							<h3><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a><span class="arrow"></span></h3>
+							<time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time>
+						</article>
+
+					<? endwhile; endif; ?>
+
 				</ul>
 			</section>
 		</div>

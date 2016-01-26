@@ -18,6 +18,8 @@ get_header(); ?>
 		<div class="center">
 			<section class="top-news">
 
+				<h1>Все новости за 2015 год</h1>
+
 				<?php $args = array(
 					'category__in' => array(12),
 					'posts_per_page' => 3

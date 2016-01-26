@@ -21,8 +21,12 @@ if (in_category( array( 2, 3, 4 ) )) :
 					<!-- Меню табов -->
 					<ul>
 						<li><a href="#tabs1">Результат</a></li>
-						<li><a href="#tabs2">Процесс</a></li>
-						<li><a href="#tabs3">О заказчике</a></li>
+						<?php if ( get_field("process") ) {
+							echo '<li><a href="#tabs2">Процесс</a></li>';
+						} ?>
+						<?php if ( get_field("client") ) {
+							echo '<li><a href="#tabs3">О заказчике</a></li>';
+						} ?>
 					</ul>
 					<div id="tabs_container">
 						<!-- Таб 1 -->
@@ -38,8 +42,8 @@ if (in_category( array( 2, 3, 4 ) )) :
 							<section class="ya-share2" data-services="vkontakte,facebook,twitter"></section>
 							<!-- Блок с ссылками на проекты -->
 							<div class="nav-links">
-								<?php next_post_link( '%link', 'Следующий проект', true );
-								previous_post_link( '%link', 'Предыдущий проект', true ); ?>
+								<?php previous_post_link( '%link', 'Предыдущий проект', true );
+								next_post_link( '%link', 'Следующий проект', true ); ?>
 							</div>
 						</div>
 						<!-- Таб 2 -->
@@ -55,8 +59,8 @@ if (in_category( array( 2, 3, 4 ) )) :
 							<section class="ya-share2" data-services="vkontakte,facebook,twitter"></section>
 							<!-- Блок с ссылками на проекты -->
 							<div class="nav-links">
-								<?php next_post_link( '%link', 'Следующий проект', true );
-								previous_post_link( '%link', 'Предыдущий проект', true ); ?>
+								<?php previous_post_link( '%link', 'Предыдущий проект', true );
+								next_post_link( '%link', 'Следующий проект', true ); ?>
 							</div>
 						</div>
 						<!-- Таб 3 -->
@@ -72,16 +76,18 @@ if (in_category( array( 2, 3, 4 ) )) :
 							<section class="ya-share2" data-services="vkontakte,facebook,twitter"></section>
 							<!-- Блок с ссылками на проекты -->
 							<div class="nav-links">
-								<?php next_post_link( '%link', 'Следующий проект', true );
-								previous_post_link( '%link', 'Предыдущий проект', true ); ?>
+								<?php previous_post_link( '%link', 'Предыдущий проект', true );
+								next_post_link( '%link', 'Следующий проект', true ); ?>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 			<aside class="aside">
-				<a href="<?php echo get_field("link_to_site"); ?>" class="link-to-site">Посмотреть сайт</a>
-				<h2>Дизайн разработан:</h2>
+				<?php if ( get_field("link_to_site") ) {
+					echo '<a href="' . get_field("link_to_site") . '" class="link-to-site">Посмотреть сайт</a>';
+				} ?>
+				<h2>Проект разработан:</h2>
 				<div class="desing-cont">
 					<?php echo get_field("developers"); ?>
 				</div>
@@ -101,8 +107,8 @@ elseif (in_category( array( 10 ) )) :
 					<div class="photo" style="background: url(<?php echo get_field("foto"); ?>) 50% 50% no-repeat;"></div>
 					<h1><?php echo get_the_title(); ?></h1>
 					<p class="dolzhnost"><?php echo get_field("profi"); ?></p>
-					<div class="soc-button"></div>
-					<div class="soc-button"></div>
+					<span class="soc-button" style="background: url() no-repeat;"></span>
+					<span class="soc-button" style="background: url() no-repeat;"></span>
 				</div>
 				<div class="blockquote">
 					<blockquote><?php echo get_field("quote"); ?></blockquote>
@@ -112,28 +118,26 @@ elseif (in_category( array( 10 ) )) :
 				</div>
 			</section>
 			<section class="last-news">
-				<h2>Новости</h2>
+				<h2>Мои статьи</h2>
 				<ul class="news-grid">
-					<li>
-						<h3>Дизайнерские оргазмы и KPI Посоны, кажется я панк Посоны, кажется я панк кажется я панк кажется я панк кажется я панк</h3>
-						<time>04 окт, 11:55</time>
-					</li>
-					<li>
-						<h3>Дизайнерские оргазмы и KPI Посоны, кажется я панк Посоны, кажется я панк</h3>
-						<time>04 окт, 11:55</time>
-					</li>
-					<li>
-						<h3>Посоны, кажется я панк Посоны, кажется я панк Посоны, кажется я панк</h3>
-						<time></time>
-					</li>
-					<li>
-						<h3></h3>
-						<time></time>
-					</li>
-					<li>
-						<h3></h3>
-						<time></time>
-					</li>
+
+					<?php $args = array(
+						'category__and' => array( 14, 15 ),
+						'posts_per_page' => 12
+						);
+					$blog = new WP_Query($args);
+					if($blog->have_posts()):
+						while($blog->have_posts()): $blog->the_post();?>
+
+						<article class="grid-item">
+							<h3><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h3>
+							<time datetime="<?php the_time( 'Y-m-d' ); ?>" class="date-time"><?php the_time(); ?></time>
+						</article>
+
+					<?php endwhile; else:
+						echo '<p class="fuuu">У этого сотрудника ещё нет статей</p>';
+					endif; ?>
+
 				</ul>
 			</section>
 		</div>
@@ -141,7 +145,6 @@ elseif (in_category( array( 10 ) )) :
 
 <?php endwhile;
 // Деталка блога
-// !!!!!!!!!!!!!!! ДОБАВИТЬ ПРОВЕРКУ НА НАЛИЧИЕ ТЕКСТА В БЛОКАХ !!!!!!!!!!!!!!!!
 elseif (in_category( array( 6, 7, 8, 9 ) )) :
 	while ( have_posts() ) : the_post(); ?>
 

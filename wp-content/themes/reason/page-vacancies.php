@@ -21,15 +21,20 @@ get_header(); ?>
 				<div class="accordion">
 					<div class="accordion-section">
 
-						<a class="accordion-section-title" href="#accordion-1">Дизайнер</a>
-						<div id="accordion-1" class="accordion-section-content">
-							<p>Да. поселок газифицирован. ГРП была установлена, как и планировалось, 01 октября 2015 г.</p>
-							<ul>
-								<li>Dоселок газифи</li>
-								<li>поселок газифи</li>
-								<li>поселок газифи</li>
-							</ul>
-						</div>
+						<?php $args = array(
+							'category__in' => array(13),
+							'posts_per_page' => 10
+							);
+						$query = new WP_Query($args);
+						if($query->have_posts()):
+							while($query->have_posts()): $query->the_post();?>
+
+							<a class="accordion-section-title" href="#accordion-1"><?php echo get_the_title(); ?></a>
+							<div id="accordion-1" class="accordion-section-content">
+								<?php echo get_the_content(); ?>
+							</div>
+
+						<? endwhile; endif; ?>
 
 						<a class="accordion-section-title" href="#accordion-2">Если я решу построить сам - выйдет дешевле?</a>
 						<div id="accordion-2" class="accordion-section-content">

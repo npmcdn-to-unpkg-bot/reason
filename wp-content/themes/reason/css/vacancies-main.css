@@ -20,6 +20,9 @@
 	font-weight: 700;
 	font-size: 24px;
 }
+.accordion-section-title:hover{
+	background: #0de4d8;
+}
 .accordion-section-title.active{
 	background: #0de4d8;
 }

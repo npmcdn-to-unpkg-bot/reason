@@ -29,13 +29,13 @@ get_header(); ?>
 	<main class="main">
 		<div class="center">
 			<section class="grid">
-					<?php $args = array(
-						'category__in' => array( 2 ),
-						'posts_per_page' => 12
-						);
-					$projects_all = new WP_Query($args);
-					if($projects_all->have_posts()):
-						while($projects_all->have_posts()): $projects_all->the_post();?>
+				<?php $args = array(
+					'category__in' => array( 2 ),
+					'posts_per_page' => 12
+					);
+				$projects_all = new WP_Query($args);
+				if($projects_all->have_posts()):
+					while($projects_all->have_posts()): $projects_all->the_post();?>
 
 					<div class="grid-item">
 						<a href="<?php the_permalink(); ?>" class="img-cont" style="background: url(<?php echo get_field("cover"); ?>) 50% 50% no-repeat;"></a>

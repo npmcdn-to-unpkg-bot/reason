@@ -8,9 +8,15 @@ main{
 	content: '';
 	clear: both;
 }
-.top-news,
-.grid{
+.top-news{
 	padding-bottom: 60px;
+}
+.grid{
+	padding-bottom: 40px;
+}
+.top-news h1{
+	font-size: 36px;
+	margin-bottom: 40px;
 }
 .top-news article{
 	float: left;

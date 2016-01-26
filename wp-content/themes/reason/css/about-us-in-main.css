@@ -22,6 +22,14 @@
 	font-size: 14px;
 	line-height: 1.266;
 }
+.soc-button{
+	display: block;
+	width: 31px;
+	height: 31px;
+	float: left;
+	background: url() no-repeat;
+	background-size: cover;
+}
 
 .blockquote{
 	float: right;
@@ -81,21 +89,30 @@
 .last-news h2{
 	font-size: 28px;
 }
+.last-news .fuuu{
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 0.045em;
+	padding-bottom: 30px;
+}
 .news-grid{
 	padding: 35px 0 40px;
 }
-.news-grid li{
+.news-grid .grid-item{
 	display: inline-block;
 	width: 360px;
 	margin: 0 80px 25px 0;
 	vertical-align: top;
 }
-.news-grid li h3{
+.news-grid .grid-item h3{
 	font-size: 18px;
 	line-height: 1.5;
 	letter-spacing: 0.045em;
 }
-.news-grid li time{
+.news-grid .grid-item time{
 	font-size: 14px;
 	line-height: 1.929;
+}
+.news-grid a:hover{
+	text-decoration: underline;
 }

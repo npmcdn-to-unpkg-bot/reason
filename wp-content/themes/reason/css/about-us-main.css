@@ -110,21 +110,21 @@
 .news-grid{
 	padding: 35px 0 40px;
 }
-.news-grid li{
+.news-grid article{
 	display: inline-block;
 	width: 360px;
 	margin: 0 80px 25px 0;
 	vertical-align: top;
 }
-.news-grid li h3{
+.news-grid article h3 a{
 	font-size: 18px;
 	line-height: 1.5;
 	letter-spacing: 0.045em;
 }
-.news-grid li h3:hover{
+.news-grid article h3 a:hover{
 	text-decoration: underline;
 }
-.news-grid li time{
+.news-grid article time{
 	font-size: 14px;
 	line-height: 1.929;
 }
