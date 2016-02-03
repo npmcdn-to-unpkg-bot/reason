@@ -10,7 +10,7 @@
 }
 .left{
 	float: left;
-	width: 930px;
+	width: 920px;
 }
 .left h1{
 	font-size: 36px;
@@ -22,7 +22,7 @@
 /* Aside */
 .aside{
 	float: right;
-	width: 250px;
+	width: 240px;
 	padding: 125px 0 0 0;
 }
 .aside .link-to-site{
@@ -35,6 +35,7 @@
 }
 .aside h2{
 	text-align: right;
+	font-size: 22px;
 }
 .desing-cont{
 	padding-top: 40px;
@@ -59,16 +60,16 @@
 }
 .ya-share2{
 	display: inline-block;
-	margin: 10px 0 20px;
+	margin: 10px 0 20px 5px;
 }
 
 /* Предопределённые стили */
 blockquote{
-	display: block;
-	width: 600px;
+	display: inline-block;
 	position: relative;
-	margin: 50px 0 0 50px;
-	font-size: 14px;
+	padding: 0 68px;
+	margin: 20px 0;
+	font-size: 18px;
 	font-style: italic;
 	line-height: 1.429;
 }
@@ -79,8 +80,8 @@ blockquote:before{
 	width: 27px;
 	height: 17px;
 	position: absolute;
-	left: -45px;
-	top: -13px;
+	left: 30px;
+	top: -8px;
 }
 blockquote:after{
 	display: block;
@@ -89,13 +90,14 @@ blockquote:after{
 	width: 27px;
 	height: 17px;
 	position: absolute;
-	left: 98%;
-	top: 97%;
+	right: 30px;
+	bottom: -8px;
 }
 
 /* Кнопка "Давайте" */
 .go-speek{
 	padding: 30px 0 35px;
+	font-weight: 300;
 }
 .go-speek a.button{
 	display: block;
@@ -120,11 +122,23 @@ blockquote:after{
 	font-weight: 300;
 	font-size: 18px;
 }
+.content h2{
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+.content h3{
+	font-size: 21px;
+}
+.content h4{
+	font-size: 18px;
+}
 .content p:first-of-type{
 	margin: 0 0 20px;
 }
 .nav-links{
-	margin: 50px 0 30px;
+	padding: 40px 0 30px;
+	position: relative;
+	font-weight: 300;
 }
 .nav-links:after{
 	display: block;
@@ -134,10 +148,18 @@ blockquote:after{
 .nav-links a{
 	position: relative;
 	display: inline-block;
-	margin-left: 175px;
+	position: absolute;
 }
 .nav-links a:hover{
 	text-decoration: underline;
+}
+.nav-links a[rel="prev"] {
+	left: 20%;
+	top: 40px;
+}
+.nav-links a[rel="next"] {
+	right: 20%;
+	top: 40px;
 }
 .nav-links a[rel="prev"]:before{
 	display: inline-block;
@@ -148,6 +170,11 @@ blockquote:after{
 	display: inline-block;
 	content: '>';
 	padding-left: 10px;
+}
+#tabs1,
+#tabs2,
+#tabs3{
+	width: 100%;
 }
 #tabs1 > ul,
 #tabs2 > ul,
@@ -182,36 +209,28 @@ blockquote:after{
 #tabs a:active, #tabs a:focus {
 	outline: expression(hideFocus='true');
 }
-#tabs,#tabs2,#tabs3 {
-	width: 900px;
-}
 
-#tabs>ul>li,#tabs2>ul>li,#tabs3>ul>li {
+#tabs>ul>li {
 	float: left;
 	margin-right: 50px;
 }
 
-#tabs>ul>li a,#tabs2>ul>li a,#tabs3>ul>li a {
+#tabs>ul>li a {
 	display: block;
 	font-size: 18px;
 	transition: all 0.25s ease;
 }
 
-#tabs>ul>li a:hover,#tabs2>ul>li a:hover,#tabs3>ul>li a:hover {
+#tabs>ul>li a:hover {
 	color: #0de4d8;
 }
 
 #tabs_container {
+	width: 100%;
 	padding: 40px 0 40px;
 	overflow: hidden;
 	position: relative;
 	background: white;
-}
-
-#tabs1,
-#tabs2,
-#tabs3 {
-	margin-right: 40px;
 }
 
 .transition {
@@ -276,4 +295,111 @@ blockquote:after{
 .tabulousclear {
 	display: block;
 	clear: both;
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1210px) {
+	
+	.left{
+		width: 720px;
+	}
+	.aside{
+		width: 200px;
+		padding: 128px 0 0 0;
+	}
+	.aside .link-to-site {
+		font-size: 14px;
+		margin-bottom: 43px;
+	}
+	.aside h2 {
+		font-size: 18px;
+	}
+	.desing-cont {
+		width: 160px;
+		font-size: 14px;
+	}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+	.left{
+		width: 100%;
+		float: none;
+	}
+	.aside{
+		display: none;
+	}
+
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+	.left h1 {
+		font-size: 24px;
+		padding: 30px 0 25px;
+	}
+	#tabs>ul>li a {
+		font-size: 16px;
+	}
+	.nav-links a[rel="prev"] {
+		left: 0%;
+		top: 30px;
+	}
+	.nav-links a[rel="next"] {
+		right: 0%;
+		top: 30px;
+	}
+	.content h2 {
+		font-size: 18px;
+		margin-bottom: 15px;
+	}
+	.content p:first-of-type {
+		margin: 0 0 15px;
+	}
+	.content p {
+		margin: 15px 0;
+		font-size: 16px;
+	}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+	.left h1 {
+		font-size: 21px;
+		padding: 25px 0 25px;
+	}
+	#tabs>ul>li a {
+		font-size: 14px;
+	}
+	#tabs>ul>li {
+		margin-right: 42px;
+	}
+	#tabs>ul>li:last-of-type{
+		margin-right: 0;
+	}
+	.content h2 {
+		font-size: 16px;
+	}
+	.content p {
+		font-size: 14px;
+	}
+	.go-speek a.button {
+		width: 66px;
+		height: 17px;
+		font-size: 16px;
+	}
+	.nav-links{
+		padding: 30px 0 20px;
+		position: relative;
+	}
+	.nav-links a{
+		font-size: 12px;
+	}
+	
 }

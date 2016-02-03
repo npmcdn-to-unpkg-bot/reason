@@ -32,7 +32,7 @@ if (in_category( array( 2, 3, 4 ) )) :
 						<!-- Таб 1 -->
 						<div id="tabs1">
 							<div class="content">
-								<?php echo get_the_content(); ?>
+								<?php echo the_content(); ?>
 							</div>
 							<div class="go-speek">
 								<p>Нравится работа? Давайте обсудим Ваш проект</p>
@@ -85,7 +85,7 @@ if (in_category( array( 2, 3, 4 ) )) :
 			</section>
 			<aside class="aside">
 				<?php if ( get_field("link_to_site") ) {
-					echo '<a href="' . get_field("link_to_site") . '" class="link-to-site">Посмотреть сайт</a>';
+					echo '<a href="' . get_field("link_to_site") . '" class="link-to-site" target="_blank">Посмотреть сайт</a>';
 				} ?>
 				<h2>Проект разработан:</h2>
 				<div class="desing-cont">
@@ -104,7 +104,7 @@ elseif (in_category( array( 10 ) )) :
 		<div class="center">
 			<section class="nastavnik">
 				<div class="img-cont">
-					<div class="photo" style="background: url(<?php echo get_field("foto"); ?>) 50% 50% no-repeat;"></div>
+					<div class="photo" style="background: url(<?php echo get_field("foto"); ?>) 50% 50% no-repeat;background-size:cover;"></div>
 					<h1><?php echo get_the_title(); ?></h1>
 					<p class="dolzhnost"><?php echo get_field("profi"); ?></p>
 					<span class="soc-button" style="background: url() no-repeat;"></span>
@@ -118,7 +118,7 @@ elseif (in_category( array( 10 ) )) :
 				</div>
 			</section>
 			<section class="last-news">
-				<h2>Мои статьи</h2>
+				<h2>Мой блог</h2>
 				<ul class="news-grid">
 
 					<?php $args = array(
@@ -198,7 +198,7 @@ elseif (in_category( array( 6, 7, 8, 9 ) )) :
 			<div class="content-main">
 				<div class="preview-container" id="preview">
 					<h1><?php echo get_the_title(); ?></h1>
-					<?php echo get_the_content(); ?>
+					<?php echo the_content(); ?>
 				</div>
 				<div class="h2-block" id="h2-block-1">
 					<?php if ( get_field("h2-1") ) {
@@ -273,7 +273,7 @@ elseif (in_category( array( 11, 12 ) )) :
 		<div class="center">
 			<h1><?php echo get_the_title(); ?></h1>
 			<div class="content">
-				<?php echo get_the_content(); ?>
+				<?php echo the_content(); ?>
 			</div>
 		</div>
 	</main>

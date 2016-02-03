@@ -3,13 +3,29 @@ $(document).ready(function() {
 	// Sticky Navigate Line
 	$(window).scroll(function(){
 		var scroll = $(window).scrollTop();
-		if(scroll > 160 ){
-			$('.scroll-line').css({'position' : 'fixed', 'top' : '0'});
+		// Media
+		var mq = window.matchMedia( "(min-width: 591px)" );
+		if (mq.matches) {
+			if(scroll > 160 ){
+				$('.scroll-line').css({'position' : 'fixed', 'top' : '0'});
+			} else {
+				$('.scroll-line').css({'position' : 'absolute', 'top' : '160px'});
+			}
 		} else {
-			$('.scroll-line').css({'position' : 'absolute', 'top' : '160px'});
+			if(scroll > 45 ){
+				$('.scroll-line').css({'position' : 'fixed', 'top' : '0'});
+			} else {
+				$('.scroll-line').css({'position' : 'absolute', 'top' : '45px'});
+			}
 		}
+
 	});
 
+});
+
+$(window).load(function() {
+
+	// Осторожно! Дальше говнокод
 	// Navigate Line
 	// Высота блоков с контентом
 	var contentAllHeight = $('.content-all').height(),

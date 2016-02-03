@@ -35,6 +35,7 @@ body {
 .planets-cont > div > a > h2{
 	color: #efffff;
 	position: absolute;
+	z-index: 1;
 	font-weight: 400;
 	font-size: 28px;
 	transition: all 0.3s ease-out;
@@ -48,6 +49,7 @@ body {
 .planets{
 	position: relative;
 	transform: perspective(850px);
+	transition: all 3s ease;
 }
 .planets img{
 	max-width: 100%;
@@ -57,6 +59,7 @@ body {
 }
 .planets .planet-img{
 	position: relative;
+	z-index: 2;
 }
 /* H2 positions */
 .fir-stil{
@@ -106,10 +109,6 @@ body {
 	width: 7.604167%;
 	height: 50px;
 }
-.planets{
-	position: relative;
-	transition: all 3s ease;
-}
 .planet-1{
 	width: 6.979167%;
 	transform: translateY(-150px);
@@ -136,6 +135,7 @@ body {
 }
 .planets-vertical .planets-cont .one-line{
 	transform: translateY(0);
+	transform: translateX(0);
 }
 .planet-1 .mini-img-1,
 .planet-1 .mini-img-2{
@@ -274,11 +274,11 @@ body {
 	}
 	50%{
 		transform: translate(-190px,87px);
-		z-index: 1;
+		z-index: 3;
 	}
 	100%{
 		transform: translate(0,0);
-		z-index: 1;
+		z-index: 3;
 	}
 }
 @keyframes orbita1920-1-1 {
@@ -288,11 +288,11 @@ body {
 	}
 	50%{
 		transform: translate(-190px,87px);
-		z-index: 1;
+		z-index: 3;
 	}
 	100%{
 		transform: translate(0,0);
-		z-index: 1;
+		z-index: 3;
 	}
 }
 
@@ -300,29 +300,29 @@ body {
 @-webkit-keyframes orbita1600-1-1 {
 	0%{
 		transform: translate(0,0);
-		z-index: 500;
+		z-index: -500;
 	}
 	50%{
 		transform: translate(-155px,75px);
-		z-index: -1;
+		z-index: 3;
 	}
 	100%{
 		transform: translate(0,0);
-		z-index: -1;
+		z-index: 3;
 	}
 }
 @keyframes orbita1600-1-1 {
 	0%{
 		transform: translate(0,0);
-		z-index: 500;
+		z-index: -500;
 	}
 	50%{
 		transform: translate(-150px,85px);
-		z-index: -1;
+		z-index: 3;
 	}
 	100%{
 		transform: translate(0,0);
-		z-index: -1;
+		z-index: 3;
 	}
 }
 
@@ -330,29 +330,29 @@ body {
 @-webkit-keyframes orbita1366-1-1 {
 	0%{
 		transform: translate(0,0);
-		z-index: 500;
+		z-index: -500;
 	}
 	50%{
-		transform: translate(-125px,75px);
-		z-index: -1;
+		transform: translate(-130px,68px);
+		z-index: 3;
 	}
 	100%{
 		transform: translate(0,0);
-		z-index: -1;
+		z-index: 3;
 	}
 }
 @keyframes orbita1366-1-1 {
 	0%{
 		transform: translate(0,0);
-		z-index: 500;
+		z-index: -500;
 	}
 	50%{
-		transform: translate(-85px,60px);
-		z-index: -1;
+		transform: translate(-130px,68px);
+		z-index: 3;
 	}
 	100%{
 		transform: translate(0,0);
-		z-index: -1;
+		z-index: 3;
 	}
 }
 
@@ -549,11 +549,11 @@ body {
 	}
 	50%{
 		transform: translate(-235px,-155px);
-		z-index: 1;
+		z-index: 3;
 	}
 	100%{
 		transform: translate(0,0);
-		z-index: 1;
+		z-index: 3;
 	}
 }
 @keyframes orbita1920-5 {
@@ -563,11 +563,11 @@ body {
 	}
 	50%{
 		transform: translate(-235px,-155px);
-		z-index: 1;
+		z-index: 3;
 	}
 	100%{
 		transform: translate(0,0);
-		z-index: 1;
+		z-index: 3;
 	}
 }
 
@@ -579,11 +579,11 @@ body {
 	}
 	50%{
 		transform: translate(-205px,-130px);
-		z-index: 1;
+		z-index: 3;
 	}
 	100%{
 		transform: translate(0,0);
-		z-index: 1;
+		z-index: 3;
 	}
 }
 @keyframes orbita1600-5 {
@@ -593,11 +593,11 @@ body {
 	}
 	50%{
 		transform: translate(-205px,-130px);
-		z-index: 1;
+		z-index: 3;
 	}
 	100%{
 		transform: translate(0,0);
-		z-index: 1;
+		z-index: 3;
 	}
 }
 
@@ -609,11 +609,11 @@ body {
 	}
 	50%{
 		transform: translate(-175px,-115px);
-		z-index: 1;
+		z-index: 3;
 	}
 	100%{
 		transform: translate(0,0);
-		z-index: 1;
+		z-index: 3;
 	}
 }
 @keyframes orbita1366-5 {
@@ -623,11 +623,11 @@ body {
 	}
 	50%{
 		transform: translate(-175px,-115px);
-		z-index: 1;
+		z-index: 3;
 	}
 	100%{
 		transform: translate(0,0);
-		z-index: 1;
+		z-index: 3;
 	}
 }
 
@@ -824,12 +824,6 @@ body {
 
 /* XL-Wide Screens */
 @media only screen and (max-width : 1600px) {
-	.menu-but{
-		font-size: 20px;
-	}
-	.side-menu li a{
-		font-size: 24px;
-	}
 	.planet-1 .mini-img-1{
 		-webkit-animation: orbita1600-1-1 7s ease-in-out infinite paused;
 		animation: orbita1600-1-1 7s ease-in-out infinite paused;
@@ -892,11 +886,11 @@ body {
 	}
 	.planet-1 .mini-img-2{
 		-webkit-animation: orbita1366-1-2 6s ease-in-out infinite paused;
-		animation: orbita1366-1-2 7s ease-in-out infinite paused;
+		animation: orbita1366-1-2 6s ease-in-out infinite paused;
 	}
 	.planet-1:hover .mini-img-2{
 		-webkit-animation: orbita1366-1-2 6s ease-in-out infinite running;
-		animation: orbita1366-1-2 7s ease-in-out infinite running;
+		animation: orbita1366-1-2 6s ease-in-out infinite running;
 	}
 	.planet-2 .mini-img-1{
 		-webkit-animation: orbita1366-2 5s ease-in-out infinite;
@@ -932,56 +926,156 @@ body {
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-
+	.planets .services{
+		left: 20%;
+	}
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width : 1000px) {
+	/* Animation cancel start */
+	.planet-1 .mini-img-1{
+		-webkit-animation: none;
+		animation: none;
+	}
+	.planet-1:hover .mini-img-1{
+		-webkit-animation: none;
+		animation: none;
+	}
+	.planet-1 .mini-img-2{
+		-webkit-animation: none;
+		animation: none;
+	}
+	.planet-1:hover .mini-img-2{
+		-webkit-animation: none;
+		animation: none;
+	}
+	.planet-2 .mini-img-1{
+		-webkit-animation: none;
+		animation: none;
+	}
+	.planet-3 .mini-img-1{
+		-webkit-animation: none;
+		animation: none;
+	}
+	.planet-3:hover .mini-img-1{
+		-webkit-animation: none;
+		animation: none;
+	}
 
+	.planet-5 .mini-img-1{
+		-webkit-animation: none;
+		animation: none;
+	}
+	.planet-5:hover .mini-img-1{
+		-webkit-animation: none;
+		animation: none;
+	}
+
+	.planet-6 .mini-img-1{
+		-webkit-animation: none;
+		animation: none;
+	}
+	.planet-6:hover .mini-img-1{
+		-webkit-animation: none;
+		animation: none;
+	}
+	/* Animation cancel end */
+
+	.planets .services{
+		left: 20%;
+		opacity: 1;
+		top: -95%;
+	}
+	.planets .about-us{
+		opacity: 1;
+	}
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 	
-	/*Disable Animation on Mobile Devices*/
+	.planets-cont > div > a > h2{
+		font-size: 18px;
+	}
+	.saity{
+		top: -70%;
+	}
+	.planets .services{
+		top: -110%;
+	}
 	
-
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+	.planets-cont > div > a > h2 {
+		font-size: 12px;
+	}
 }
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 420px) {
+	
+	.planets-cont{
+		height: 75%;
+	}
+	.planets-cont .planets{
+		display: block;
+		margin: 0 auto;
+	}
+	.planets-cont .rasporka-left{
+		height: 0;
+	}
+	.planets-cont .rasporka-right{
+		display: none;
+	}
+	.planets-cont .planet-margin{
+		height: 50px;
+	}
+	.planets-cont .planet-1{
+		width: 16.5625%;
+		transform: translateY(-150px);
+		transform: translateX(-50px);
+	}
+	.planets-cont .planet-2{
+		display: none;
+	}
+	.planets-cont .planet-3{
+		width: 20.9375%;
+		transform: translateY(100px);
+		transform: translateX(35px);
+	}
+	.planets-cont .planet-4{
+		display: none;
+	}
+	.planets-cont .planet-5{
+		width: 16.25%;
+		transform: translateY(-90px);
+		transform: translateX(-30px);
+	}
+	.planets-cont .planet-6{
+		width: 29.6875%;
+		transform: translateY(150px);
+		transform: translateX(50px);
+	}
 
-}
-
-
-/*==========  Mobile First Method  ==========*/
-
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {
-
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
-
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-
-}
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
+	/* H2 positions */
+	.fir-stil{
+		top: 30%;
+		left: 140%;
+	}
+	.saity{
+		top: 40%;
+		left: -130%;
+	}
+	.apps{
+		top: 40%;
+		left: 140%;
+	}
+	.all{
+		top: 40%;
+		left: -80%;
+	}
 
 }

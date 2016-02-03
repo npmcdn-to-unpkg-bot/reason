@@ -15,7 +15,7 @@
 		<div class="center">
 			<p class="license">© РИЗН Студия графического дизайна<br>
 				<br>
-				2013-2015 Все права защищены</p>
+				2013&#8209;2015&nbsp;Все&nbsp;права&nbsp;защищены</p>
 			<p class="address">Казахстан, г. Караганда<br>
 				ул. Алиханова, дом 37, офис 625<br>
 				+7 (7212) 507-800</p>
@@ -33,9 +33,9 @@
 
 <?php wp_footer(); ?>
 <script>
-	$(document).ready(function() {
+	$(window).load(function() {
 		var w = $(window).height();
-		var b = $('body').height();
+		var b = $('body').height() - 140;
 		var f = $('.main-footer');
 		if( ((w - b) - 140) >= 0 ) {
 			f.height(w - b);

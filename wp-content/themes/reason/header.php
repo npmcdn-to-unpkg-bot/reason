@@ -20,7 +20,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Ризн</title>
+	<title><?php echo wp_get_document_title(); ?></title>
 	<meta name="description" content="">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700,400italic&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
 
@@ -62,6 +62,9 @@
 					<li><a href="/services/">Услуги</a></li>
 					<li><a href="/about-us/">О нас</a></li>
 					<li><a href="/contacts/">Контакты</a></li>
+					<li><a href="http://academy.reason.kz/">Академия</a></li>
+					<li><a href="/blog/">Блог</a></li>
+					<li><a href="/news/">Новости</a></li>
 				</ul>
 			</div>
 		</div>

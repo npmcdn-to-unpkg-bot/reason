@@ -1,7 +1,7 @@
 /* Main */
 .img-cont{
 	float: left;
-	padding-top: 50px;
+	margin-top: 50px;
 }
 .img-cont:after{
 	display: block;
@@ -29,12 +29,22 @@
 	float: left;
 	background: url() no-repeat;
 	background-size: cover;
+	margin: 20px 20px 0 0;
 }
 
 .blockquote{
+	position: relative;
 	float: right;
-	padding-top: 50px;
+	margin-top: 50px;
 	width: 859px;
+	height: 320px;
+	text-align: center;
+}
+.blockquote:before{
+	content:'';
+	height: 100%;
+	display: inline-block;
+	vertical-align: middle;
 }
 .blockquote:after{
 	display: block;
@@ -42,13 +52,15 @@
 	clear: both;
 }
 .blockquote blockquote{
-	display: block;
+	display: inline-block;
 	width: 600px;
 	position: relative;
-	margin: 100px 0 0 170px;
+	margin: 0 auto;
 	font-size: 14px;
 	font-style: italic;
 	line-height: 1.429;
+	vertical-align: middle;
+	text-align: left;
 }
 .blockquote blockquote:before{
 	display: block;
@@ -67,7 +79,7 @@
 	width: 27px;
 	height: 17px;
 	position: absolute;
-	left: 98%;
+	left: 102%;
 	top: 97%;
 }
 
@@ -115,4 +127,152 @@
 }
 .news-grid a:hover{
 	text-decoration: underline;
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1210px) {
+	
+	.img-cont {
+		margin-top: 40px;
+	}
+	.img-cont .photo {
+		width: 255px;
+		height: 280px;
+	}
+	.blockquote {
+		margin-top: 40px;
+		width: 665px;
+		height: 280px;
+	}
+	.blockquote blockquote {
+		width: 400px;
+	}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+	.news-grid article {
+		width: 300px;
+		margin: 0 55px 25px 0;
+	}
+	.blockquote {
+		width: 465px;
+	}
+	.blockquote blockquote {
+		width: 290px;
+	}
+	.opisanie {
+		float: none;
+		width: 100%;
+		clear: both;
+	}
+	.last-news h2 {
+		font-size: 21px;
+	}
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+	.img-cont .photo {
+		width: 215px;
+		height: 230px;
+	}
+	.img-cont h1 {
+		font-size: 14px;
+	}
+	.img-cont p {
+		font-size: 12px;
+	}
+	.soc-button {
+		margin: 10px 15px 0 0;
+	}
+	.blockquote {
+		width: 215px;
+		height: 230px;
+	}
+	.blockquote blockquote {
+		font-size: 10px;
+		width: 140px;
+	}
+	.blockquote blockquote:before{
+		background-size: contain;
+		width: 20px;
+		height: 10px;
+		left: -25px;
+		top: -7px;
+	}
+	.blockquote blockquote:after{
+		background-size: contain;
+		width: 20px;
+		height: 10px;
+		left: 102%;
+		top: 98%;
+	}
+	.opisanie {
+		padding: 20px 0 30px;
+		font-size: 12px;
+	}
+	.last-news h2 {
+		font-size: 18px;
+	}
+	.news-grid {
+		padding: 15px 0 20px;
+	}
+	.news-grid article h3 a {
+		font-size: 14px;
+	}
+	.news-grid article {
+		width: 200px;
+		margin: 0 25px 25px 0;
+	}
+	.news-grid article:nth-of-type(2n){
+		margin: 0 0 25px 0;
+	}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+	.img-cont .photo {
+		width: 140px;
+		height: 180px;
+	}
+	.img-cont h1 {
+		font-size: 12px;
+	}
+	.img-cont p {
+		font-size: 10px;
+	}
+	.blockquote {
+		width: 138px;
+		height: 180px;
+	}
+	.blockquote blockquote {
+		font-size: 8px;
+		width: 125px;
+		max-height: 180px;
+		margin: 0;
+	}
+	.blockquote blockquote:before{
+		left: -20px;
+	}
+	.blockquote blockquote:after{
+		left: 100%;
+	}
+	.news-grid article {
+		width: 300px;
+		margin: 0 0 15px 0;
+	}
+	.news-grid {
+		padding: 14px 0 0px;
+	}
+	.news-grid .grid-item time {
+		font-size: 12px;
+	}
+	
 }

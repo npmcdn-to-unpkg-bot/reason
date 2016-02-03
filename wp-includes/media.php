@@ -134,7 +134,7 @@ function image_hwstring( $width, $height ) {
 		$out .= 'width="'.intval($width).'" ';
 	if ($height)
 		$out .= 'height="'.intval($height).'" ';
-	return $out;
+	return false; /******************* ОТКЛЮЧЕНИЕ ВЫВОДА РАЗМЕРА КАРТИНОК ******************************************************************************/
 }
 
 /**

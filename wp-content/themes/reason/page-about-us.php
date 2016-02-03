@@ -25,18 +25,43 @@ get_header(); ?>
 				<h2>Наша команда</h2>
 
 				<?php $args = array(
-					'category__in' => array(10)
+					'category__in' => array( 10 )
 					);
 				$projects_all = new WP_Query($args);
 				if($projects_all->have_posts()):
 					while($projects_all->have_posts()): $projects_all->the_post();?>
 
-				<div class="dark-siders" style="background: url(<?php echo get_field("foto"); ?>) 50% 50% no-repeat;"><a href="<?php the_permalink(); ?>">
+				<div class="dark-siders" style="background: url(<?php echo get_field("foto"); ?>) 50% 50% no-repeat;background-size:cover;"><a href="<?php the_permalink(); ?>">
 						<h3><span class="biruza"><?php echo get_the_title(); ?></span><br>
 						<?php echo get_field("profi"); ?></h3>
 					</a></div>
 
 				<? endwhile; endif; ?>
+
+				<div class="dark-siders" style="background: url(<?php echo get_field("foto"); ?>) 50% 50% no-repeat;background-size:cover;"><a href="<?php the_permalink(); ?>">
+					<h3><span class="biruza">Турсумбеков Аблайхан</span><br>
+						Веб-программист</h3>
+					</a></div>
+				<div class="dark-siders" style="background: url(<?php echo get_field("foto"); ?>) 50% 50% no-repeat;background-size:cover;"><a href="<?php the_permalink(); ?>">
+					<h3><span class="biruza">Турсумбеков Аблайхан</span><br>
+						Веб-программист</h3>
+					</a></div>
+				<div class="dark-siders" style="background: url(<?php echo get_field("foto"); ?>) 50% 50% no-repeat;background-size:cover;"><a href="<?php the_permalink(); ?>">
+					<h3><span class="biruza">Турсумбеков Аблайхан</span><br>
+						Веб-программист</h3>
+					</a></div>
+				<div class="dark-siders" style="background: url(<?php echo get_field("foto"); ?>) 50% 50% no-repeat;background-size:cover;"><a href="<?php the_permalink(); ?>">
+					<h3><span class="biruza">Турсумбеков Аблайхан</span><br>
+						Турсумбеков Аблайхан</h3>
+					</a></div>
+				<div class="dark-siders" style="background: url(<?php echo get_field("foto"); ?>) 50% 50% no-repeat;background-size:cover;"><a href="<?php the_permalink(); ?>">
+					<h3><span class="biruza">Турсумбеков Аблайхан</span><br>
+						Турсумбеков Аблайхан</h3>
+					</a></div>
+				<div class="dark-siders" style="background: url(<?php echo get_field("foto"); ?>) 50% 50% no-repeat;background-size:cover;"><a href="<?php the_permalink(); ?>">
+					<h3><span class="biruza">Турсумбеков Аблайхан</span><br>
+						Турсумбеков Аблайхан</h3>
+					</a></div>
 
 			</section>
 			<section class="vacancies-cont">
@@ -52,7 +77,7 @@ get_header(); ?>
 				<ul class="news-grid">
 
 					<?php $args = array(
-						'category__in' => array(12),
+						'category__in' => array( 11, 12 ),
 						'posts_per_page' => 3
 						);
 					$query = new WP_Query($args);

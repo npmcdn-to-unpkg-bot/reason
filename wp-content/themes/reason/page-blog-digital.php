@@ -42,7 +42,7 @@ get_header(); ?>
 					<article class="grid-item">
 						<h1><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h1>
 						<time datetime="<?php the_time( 'Y-m-d' ); ?>" class="date-time"><?php the_time(); ?></time>
-						<a href="<?php the_permalink(); ?>"><img src="<?php echo get_field("cover"); ?>" width="250" height="auto" alt="<?php echo get_the_title(); ?>"></a>
+						<a href="<?php the_permalink(); ?>"><img src="<?php echo get_field("cover"); ?>" alt="<?php echo get_the_title(); ?>"></a>
 						<p class="anons"><a href="<?php the_permalink(); ?>"><?php echo get_the_excerpt() ?></a></p>
 					</article>
 

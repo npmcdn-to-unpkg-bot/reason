@@ -35,11 +35,11 @@ main{
 	top: 13px;
 }
 blockquote{
-	display: block;
-	width: 600px;
+	display: inline-block;
 	position: relative;
-	margin: 50px 0 0 50px;
-	font-size: 14px;
+	padding: 0 68px;
+	margin: 20px 0;
+	font-size: 18px;
 	font-style: italic;
 	line-height: 1.429;
 }
@@ -50,8 +50,8 @@ blockquote:before{
 	width: 27px;
 	height: 17px;
 	position: absolute;
-	left: -45px;
-	top: -13px;
+	left: 30px;
+	top: -8px;
 }
 blockquote:after{
 	display: block;
@@ -60,6 +60,6 @@ blockquote:after{
 	width: 27px;
 	height: 17px;
 	position: absolute;
-	left: 98%;
-	top: 97%;
+	right: 30px;
+	bottom: -8px;
 }

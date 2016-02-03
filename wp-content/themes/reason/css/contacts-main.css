@@ -64,3 +64,82 @@
 	color: #0de4d8;
 	font-weight: bold;
 }
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1210px) {
+	
+	.client-area,
+	.pochta,
+	.soc-cont{
+		margin-right: 130px;
+	}
+	.soc-cont{
+		margin-right: 0;
+	}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+	.client-area,
+	.pochta{
+		margin-right: 50px;
+	}
+	.pochta{
+		width: 180px;
+	}
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+	.contacts{
+		padding: 30px 0 35px;
+	}
+	.contacts h1 {
+		font-size: 21px;
+		padding: 0 0 30px;
+	}
+	.contacts h2 {
+		font-size: 16px;
+		padding-bottom: 5px;
+	}
+	.client-area,
+	.pochta,
+	.soc-cont{
+		margin-bottom: 20px;
+	}
+	.contacts p {
+		font-size: 14px;
+	}
+	.go-speek {
+		padding: 10px 0 35px;
+	}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+	.contacts h1 {
+		padding: 0 0 20px;
+	}
+	.client-area,
+	.pochta,
+	.soc-cont{
+		margin-right: 0;
+		width: 100%;
+	}
+	.soc-cont p{
+		width: 75%;
+	}
+	.go-speek a.button {
+		margin-top: 15px;
+	}
+	.go-speek {
+		padding: 20px 0 45px;
+	}
+	
+}

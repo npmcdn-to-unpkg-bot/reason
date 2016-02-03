@@ -38,7 +38,7 @@ get_header(); ?>
 			<div class="planet-3 planets"><a href="/portfolio-websites/">
 					<img class="mini-img-1" src="<?php echo get_template_directory_uri(); ?>/img/mini-planet.png" alt="Чёрная маленькая планета-3">
 					<img class="planet-img" src="<?php echo get_template_directory_uri(); ?>/img/planet-3.png" alt="Чёрная планета-3">
-					<h2 class="saity">Сайты и интерфейсы</h2>
+					<h2 class="saity">Сайты и<br>интерфейсы</h2>
 				</a></div>
 
 			<div class="planet-margin"></div>
@@ -61,7 +61,7 @@ get_header(); ?>
 			<div class="planet-6 planets"><a href="/portfolio/">
 					<img class="mini-img-1" src="<?php echo get_template_directory_uri(); ?>/img/mini-big.png" alt="Чёрная маленькая планета-6">
 					<img class="planet-img" src="<?php echo get_template_directory_uri(); ?>/img/planet-6.png" alt="Чёрная планета-6">
-					<h2 class="all">Все проекты</h2>
+					<h2 class="all">Все<br>проекты</h2>
 				</a></div>
 
 			<div class="rasporka-right"></div>
